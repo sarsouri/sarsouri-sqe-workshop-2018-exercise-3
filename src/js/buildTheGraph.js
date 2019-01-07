@@ -60,7 +60,7 @@ function stringofmerg(string,node) {
         let color=node.get('color');
         if (color=='white')
             color='black';
-        node.set('color','black')
+        node.set('color','black');
 
         string=string+'n'+node.get('id').toString()+'[label="'+' '+'", shape="'+'circle",'+'color="'+color+'"]\n';
         string=ss(string,node);
@@ -81,7 +81,7 @@ function ss(string,node) {
     if (node.get('right')!=null){
         let s='n'+node.get('id').toString()+'-> n'+node.get('right').get('id').toString()+'[]\n';
         //if (string.indexOf(s)==-1) {
-            string = string + s;
+        string = string + s;
         //}
         string=changethesrting(string,node.get('right'));
     }
